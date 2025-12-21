@@ -15,7 +15,6 @@ import {
 } from "./components/modal.js";
 import { enableValidation, clearValidation } from "./components/validation.js";
 
-// Создание объекта с настройками валидации
 const validationSettings = {
   formSelector: ".popup__form",
   inputSelector: ".popup__input",
@@ -25,11 +24,8 @@ const validationSettings = {
   errorClass: "popup__error_visible",
 };
 
-// включение валидации вызовом enableValidation
-// все настройки передаются при вызове
 enableValidation(validationSettings);
 
-// DOM узлы
 const placesWrap = document.querySelector(".places__list");
 const profileFormModalWindow = document.querySelector(".popup_type_edit");
 const profileForm = profileFormModalWindow.querySelector(".popup__form");
@@ -97,7 +93,6 @@ const handleCardFormSubmit = (evt) => {
   closeModalWindow(cardFormModalWindow);
 };
 
-// EventListeners
 profileForm.addEventListener("submit", handleProfileFormSubmit);
 cardForm.addEventListener("submit", handleCardFormSubmit);
 avatarForm.addEventListener("submit", handleAvatarFromSubmit);
@@ -121,7 +116,6 @@ openCardFormButton.addEventListener("click", () => {
   clearValidation(cardFormModalWindow, validationSettings);
 });
 
-// отображение карточек
 initialCards.forEach((data) => {
   placesWrap.append(
     createCardElement(data, {
@@ -132,7 +126,6 @@ initialCards.forEach((data) => {
   );
 });
 
-//настраиваем обработчики закрытия попапов
 const allPopups = document.querySelectorAll(".popup");
 allPopups.forEach((popup) => {
   setCloseModalWindowEventListeners(popup);
