@@ -4,22 +4,23 @@
   "description": "Стартовый набор для выполнения проектной работы Место",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
-    "build": "vite build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deputatTyulkino/mesto-ad.git"
+    "url": "git+https://github.com/Lesha-well/mesto-ad.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/deputatTyulkino/mesto-ad/issues"
+    "url": "https://github.com/Lesha-well/mesto-ad/issues"
   },
-  "homepage": "https://github.com/deputatTyulkino/mesto-ad#readme",
   "devDependencies": {
-    "vite": "^7.3.0"
-  }
+    "vite": "^7.2.7"
+  },
+  "homepage": "https://github.com/Lesha-well/mesto-ad#readme"
 }
